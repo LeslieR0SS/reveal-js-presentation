@@ -1,0 +1,100 @@
+<!doctype html>
+<html>
+	<head>
+		<meta charset="utf-8">
+		<meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
+
+		<title>reveal.js</title>
+
+		<link rel="stylesheet" href="js/dist/reset.css">
+		<link rel="stylesheet" href="js/dist/reveal.css">
+		<link rel="stylesheet" href="js/dist/theme/black.css">
+
+		<!-- Theme used for syntax highlighted code -->
+		<link rel="stylesheet" href="js/plugin/highlight/monokai.css">
+	</head>
+	<body>
+		<div class="reveal">
+			<div class="slides">
+				<section data-markdown>
+					<textarea data-template>
+						## Sistemas informáticos en RIU
+
+						---
+
+						### Índice
+
+						- Uso de git
+
+							- Plataforma
+
+							- Workflow
+						
+						- Librería
+
+						- Operativas
+
+						- Entornos
+
+							- Desarrollo
+
+							- Integración
+
+						- Puesta a producción
+
+							- OpenShift
+						
+						---
+
+						### Uso de Git
+
+						---
+
+						#### Plataforma
+
+						La plataforma utilizada en la empresa es *Gitlab*, donde se aloja el repositorio el cual contiene todos los proyectos de la empresa. Según el rol asignado y a los proyectos en los que se tenga acceso, se podrá colaborar en unos u otros.
+					    
+						---
+
+						#### Workflow
+
+						Las dos ramas principales son la de *master* y *develop*, la develop es la que siempre está más actualizada, pero la master siempre es la más estable.
+
+						---
+
+						#### Workflow
+
+						Al empezar a desarrollar, se utilizan ramas con nombres estándar como "fix:34567", donde el número indica el ticket que representa la User Story o la Task que se desarrolla. Una vez terminada esa task/US, se realiza una merge request a develop, la cual debe revisar otro miembro del equipo, dependiendo del entorno en el que desarrolle (front o back).
+
+						---
+
+						#### Workflow
+
+						Además, todo lo relacionado con las User Storys se gestiona en Open Project, donde están puntuadas las US, el estado en la que se encuentran y quién es el/la responsable de desarrollarla.
+
+						--- 
+
+						### Librería
+						
+					</textarea>
+				</section>
+			</div>
+		</div>
+
+		<script src="js/dist/reveal.js"></script>
+		<script src="js/plugin/notes/notes.js"></script>
+		<script src="js/plugin/markdown/markdown.js"></script>
+		<script src="js/plugin/highlight/highlight.js"></script>
+		<script>
+			// More info about initialization & config:
+			// - https://revealjs.com/initialization/
+			// - https://revealjs.com/config/
+			Reveal.initialize({
+				hash: true,
+
+				// Learn about plugins: https://revealjs.com/plugins/
+				plugins: [ RevealMarkdown, RevealHighlight, RevealNotes ]
+			});
+		</script>
+	</body>
+</html>
