@@ -16,62 +16,54 @@
 	<body>
 		<div class="reveal">
 			<div class="slides">
+				<section data-auto-animate>
+					<div data-id="box" style="height: 50px; background: white"></div>
+				</section>
+				<section data-auto-animate>
+					<div data-id="box" style="height: 175px; background: red; text-align: center">
+						<h1>RIU</h1>
+					</div>
+				</section>
 				<section data-markdown>
 					<textarea data-template>
-						## Sistemas informáticos en RIU
+
+						![](img/estructure.png)
 
 						---
 
-						### Índice
+						La estructura de la empresa es la anterior, en la cual se distinguen las distintas partes:
 
-						- Uso de git
+						- Firewall, CDN y WAF
+						- Apache
+						- Tomcat
+							- Front
+							- Back
+							- Back client
+						- API
+						- Database
 
-							- Plataforma
+						---
 
-							- Workflow
+						#### Firewall, CDN y WAF
+
+						---
+
+						#### Apache
 						
-						- Librería
-
-						- Operativas
-
-						- Entornos
-
-							- Desarrollo
-
-							- Integración
-						
 						---
 
-						### Uso de Git
+						#### Tomcat, Front, back & back client
 
 						---
 
-						#### Plataforma
+						#### API
 
-						La plataforma utilizada en la empresa es *Gitlab*, donde se aloja el repositorio el cual contiene todos los proyectos de la empresa. Según el rol asignado y a los proyectos en los que se tenga acceso, se podrá colaborar en unos u otros.
-					    
-						---
+						Aún que se utilice Spring Boot junto al ORM Hibernate a la base de datos, se requiere de una API intermedia para hacer de intermediaria entre el cliente de back y la base de datos por temas de seguridad.
 
-						#### Workflow
+						#### Database
 
-						Las dos ramas principales son la de *master* y *develop*, la develop es la que siempre está más actualizada, pero la master siempre es la más estable.
+						Es donde se encuentra toda la información de lo que pueden ser las apps corporativas, la información de las reservas, contratos, información sobre los servicios...
 
-						---
-
-						#### Workflow
-
-						Al empezar a desarrollar, se utilizan ramas con nombres estándar como "fix:34567", donde el número indica el ticket que representa la User Story o la Task que se desarrolla. Una vez terminada esa task/US, se realiza una merge request a develop, la cual debe revisar otro miembro del equipo, dependiendo del entorno en el que desarrolle (front o back).
-
-						---
-
-						#### Workflow
-
-						Además, todo lo relacionado con las User Storys se gestiona en Open Project, donde están puntuadas las US, el estado en la que se encuentran y quién es el/la responsable de desarrollarla.
-
-						--- 
-
-						### Librería
-						
 					</textarea>
 				</section>
 			</div>
