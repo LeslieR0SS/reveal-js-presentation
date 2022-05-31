@@ -1,31 +1,31 @@
-<!doctype html>
+<!DOCTYPE html>
 <html>
-	<head>
-		<meta charset="utf-8">
-		<meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
+    <head>
+        <meta charset="utf-8" />
+        <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no" />
 
-		<title>reveal.js</title>
+        <title>reveal.js</title>
 
-		<link rel="stylesheet" href="js/dist/reset.css">
-		<link rel="stylesheet" href="js/dist/reveal.css">
-		<link rel="stylesheet" href="js/dist/theme/moon.css">
+        <link rel="stylesheet" href="js/dist/reset.css" />
+        <link rel="stylesheet" href="js/dist/reveal.css" />
+        <link rel="stylesheet" href="js/dist/theme/blood.css" />
 
-		<!-- Theme used for syntax highlighted code -->
-		<link rel="stylesheet" href="js/plugin/highlight/monokai.css">
-	</head>
-	<body>
-		<div class="reveal">
-			<div class="slides">
-				<section data-auto-animate>
-					<div data-id="box" style="height: 50px; background: white"></div>
-				</section>
-				<section data-auto-animate>
-					<div data-id="box" style="height: 175px; background: red; text-align: center">
-						<h1>RIU</h1>
-					</div>
-				</section>
-				<section data-markdown>
-					<textarea data-template>
+        <!-- Theme used for syntax highlighted code -->
+        <link rel="stylesheet" href="js/plugin/highlight/monokai.css" />
+    </head>
+    <body>
+        <div class="reveal">
+            <div class="slides">
+                <section data-auto-animate>
+                    <div data-id="box" style="height: 50px; background: white"></div>
+                </section>
+                <section data-auto-animate>
+                    <div data-id="box" style="height: 175px; background: red; text-align: center">
+                        <h1>RIU</h1>
+                    </div>
+                </section>
+                <section data-markdown>
+                    <textarea data-template>
 
 						![](img/estructure.png)
 
@@ -61,10 +61,10 @@
 
 						---
 						
-						![](https://blogs.halodoc.io/content/images/2021/03/Screenshot-2021-03-30-at-9.15.26-PM.png)
-
-						---
+						![](./img/frontStructure.png)
 						
+						---
+
 						#### API
 
 						Aún que se utilice Spring Boot junto al ORM Hibernate a la base de datos, se requiere de una API intermedia para hacer de intermediaria entre el cliente de back y la base de datos por temas de seguridad.
@@ -75,25 +75,26 @@
 
 						Es donde se encuentra toda la información de lo que pueden ser las apps corporativas, la información de las reservas, contratos, información sobre los servicios...
 
-					</textarea>
-				</section>
-			</div>
-		</div>
+					</textarea
+                    >
+                </section>
+            </div>
+        </div>
 
-		<script src="js/dist/reveal.js"></script>
-		<script src="js/plugin/notes/notes.js"></script>
-		<script src="js/plugin/markdown/markdown.js"></script>
-		<script src="js/plugin/highlight/highlight.js"></script>
-		<script>
-			// More info about initialization & config:
-			// - https://revealjs.com/initialization/
-			// - https://revealjs.com/config/
-			Reveal.initialize({
-				hash: true,
+        <script src="js/dist/reveal.js"></script>
+        <script src="js/plugin/notes/notes.js"></script>
+        <script src="js/plugin/markdown/markdown.js"></script>
+        <script src="js/plugin/highlight/highlight.js"></script>
+        <script>
+            // More info about initialization & config:
+            // - https://revealjs.com/initialization/
+            // - https://revealjs.com/config/
+            Reveal.initialize({
+                hash: true,
 
-				// Learn about plugins: https://revealjs.com/plugins/
-				plugins: [ RevealMarkdown, RevealHighlight, RevealNotes ]
-			});
-		</script>
-	</body>
+                // Learn about plugins: https://revealjs.com/plugins/
+                plugins: [RevealMarkdown, RevealHighlight, RevealNotes],
+            });
+        </script>
+    </body>
 </html>
