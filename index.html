@@ -1,31 +1,31 @@
-<!doctype html>
+<!DOCTYPE html>
 <html>
-	<head>
-		<meta charset="utf-8">
-		<meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
+    <head>
+        <meta charset="utf-8" />
+        <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no" />
 
-		<title>reveal.js</title>
+        <title>reveal.js</title>
 
-		<link rel="stylesheet" href="js/dist/reset.css">
-		<link rel="stylesheet" href="js/dist/reveal.css">
-		<link rel="stylesheet" href="js/dist/theme/moon.css">
+        <link rel="stylesheet" href="js/dist/reset.css" />
+        <link rel="stylesheet" href="js/dist/reveal.css" />
+        <link rel="stylesheet" href="js/dist/theme/blood.css" />
 
-		<!-- Theme used for syntax highlighted code -->
-		<link rel="stylesheet" href="js/plugin/highlight/monokai.css">
-	</head>
-	<body>
-		<div class="reveal">
-			<div class="slides">
-				<section data-auto-animate>
-					<div data-id="box" style="height: 50px; background: white"></div>
-				</section>
-				<section data-auto-animate>
-					<div data-id="box" style="height: 175px; background: red; text-align: center">
-						<h1>RIU</h1>
-					</div>
-				</section>
-				<section data-markdown>
-					<textarea data-template>
+        <!-- Theme used for syntax highlighted code -->
+        <link rel="stylesheet" href="js/plugin/highlight/monokai.css" />
+    </head>
+    <body>
+        <div class="reveal">
+            <div class="slides">
+                <section data-auto-animate>
+                    <div data-id="box" style="height: 50px; background: white"></div>
+                </section>
+                <section data-auto-animate>
+                    <div data-id="box" style="height: 175px; background: red; text-align: center">
+                        <h1>RIU</h1>
+                    </div>
+                </section>
+                <section data-markdown>
+                    <textarea data-template>
 
 						![](img/estructure.png)
 
@@ -46,19 +46,74 @@
 
 						#### Firewall, CDN y WAF
 
+                        Firewall para bloquear las conexiones entrantes que no se permitan, WAF web application firewall, que supervisa, filtra o bloquea el tráfico http hacia y desde una app web y CDN red de distribución de contenidos, que contienen copias de datos por tema de disponibilidad de datos en distintos puntos del mundo.
+
 						---
 
 						#### Apache
+                        
+						Es un servidor web HTTP. Su funcionalidad principal es mostrar a los usuarios todos los ficheros necesarios para visualizar la web
+			    
+						---
+
+						#### Tomcat
+
+                        El Tomcat es un contenedor de servlets que se usa para compilar y ejecutar las aplicaciones web, el cual consume la lógica que se encuentra en el back, que después se conecta con todo lo que es el front.
+
+						---
+
+						#### Front
+
+						La mayoria de los projectos de front están construidos con Angular haciendo uso de typescript y scss
+
+                        ---
+
+						![](./img/estructura1.png)
 						
 						---
 
-						#### Tomcat, Front, back & back client
+                        ![](./img/estructura2.png)
+						
+						---
+						
+						![](./img/estructura3.png)
 
 						---
+						
+						![](./img/estructura4.png)
+                        						
+						---
+						
+						![](./img/estructura5.png)
+                        						
+						---
 
+                        ![](./img/estructura6.png)
+
+                        ---
+
+                        #### Back
+
+                        En el back se usa el framework Spring Boot para poder consumir recursos desde los endpoints y, por lo tanto Java. Actualmente está estructurado como un monolito pero se está trabajando proyecto a proyecto para poder migrarlo a microservicios.
+
+                        ---
+
+                        #### Back client
+
+                        Es el cliente establecido que hace las peticiones a la base de datos a través de una API.
+
+                        ---
+
+                        ![](./img/backclient.png)
+
+                        ---
 						#### API
 
 						Aún que se utilice Spring Boot junto al ORM Hibernate a la base de datos, se requiere de una API intermedia para hacer de intermediaria entre el cliente de back y la base de datos por temas de seguridad.
+
+                        Además, hacemos uso de una gran caja negra.
+
+                        ![](./img/cajaNegra.png)
 
 						---
 
@@ -66,25 +121,49 @@
 
 						Es donde se encuentra toda la información de lo que pueden ser las apps corporativas, la información de las reservas, contratos, información sobre los servicios...
 
+                        Existen diversas bbdd que estan repartidas en diferentes áreas y roles. Y en alineación con su finalidad utllizan diferentes tecnologías.
+                        
+                        ---
+
+                        ![](./img/couchBase.jpg)
+
+                        ---
+
+                        #### Comunicación interna
+
+                        Hay 4 secciones:
+                            1. Micros
+                            2. Explotació
+                            3. Nuevo Desarrollo
+                            4. DevOps
+                        
+                        ---
+
+                        #### Herramientas:
+
+                        Web internas
+                        Apps
+                        Softwares
+
 					</textarea>
-				</section>
-			</div>
-		</div>
+                </section>
+            </div>
+        </div>
 
-		<script src="js/dist/reveal.js"></script>
-		<script src="js/plugin/notes/notes.js"></script>
-		<script src="js/plugin/markdown/markdown.js"></script>
-		<script src="js/plugin/highlight/highlight.js"></script>
-		<script>
-			// More info about initialization & config:
-			// - https://revealjs.com/initialization/
-			// - https://revealjs.com/config/
-			Reveal.initialize({
-				hash: true,
+        <script src="js/dist/reveal.js"></script>
+        <script src="js/plugin/notes/notes.js"></script>
+        <script src="js/plugin/markdown/markdown.js"></script>
+        <script src="js/plugin/highlight/highlight.js"></script>
+        <script>
+            // More info about initialization & config:
+            // - https://revealjs.com/initialization/
+            // - https://revealjs.com/config/
+            Reveal.initialize({
+                hash: true,
 
-				// Learn about plugins: https://revealjs.com/plugins/
-				plugins: [ RevealMarkdown, RevealHighlight, RevealNotes ]
-			});
-		</script>
-	</body>
+                // Learn about plugins: https://revealjs.com/plugins/
+                plugins: [RevealMarkdown, RevealHighlight, RevealNotes],
+            });
+        </script>
+    </body>
 </html>
